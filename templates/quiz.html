@@ -1,0 +1,49 @@
+{% extends "home.html" %}
+{% load static %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static "css/quiz.css" %}">
+<div class="content">
+    <a href="{% url 'homePage' %}">Ana Sayfa</a>
+</div>
+
+<h1>Quiz</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <div>
+        <h2>
+            <label for="username">Adınız :</label>
+            <input type="text" name="username" placeholder="zorunlu değil">
+        </h2>
+    </div>
+    {% if toplam_puan is not None %}
+        <h3>Your total score: {{ toplam_puan }}</h3>
+    {% endif %}
+    {% for soru in sorular %}
+        <div class="question">
+            <h2>{{ soru.question_text }}</h2>
+            <div class="choices">
+                {% for secenek in secenekler %}
+                    {% if secenek.question_id == soru.id %}
+                        <label>
+                            <input type="radio" name="question_{{ soru.id }}" value="{{ secenek.id }}">
+                            {{ secenek.choice_text }}
+                        </label>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:2 %}
+            <div style="clear:both;"></div>
+        {% endif %}
+    {% endfor %}
+    <input type="submit" value="Gönder">
+</form>
+
+{% endblock content %}
+
+
+
+
+

@@ -1,0 +1,55 @@
+.content {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.question {
+    display: inline-block;
+    width: 45%; /* İki soruyu yan yana sığacak şekilde ayarladık */
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.choices {
+    margin-top: 10px;
+}
+
+.choices label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form {
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 50%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 45px;
+
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}

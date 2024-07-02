@@ -1,0 +1,63 @@
+.page-header {
+    background-color: #007bff; /* Arka plan rengi */
+    color: #fff; /* Metin rengi */
+    padding: 20px; /* Kenar boşlukları */
+    text-align: center; /* Metni ortala */
+}
+
+a {
+    text-decoration: none; /* Altı çizgiyi kaldır */
+    color: #fff; /* Link rengi */
+    font-weight: bold; /* Kalın font */
+    display: inline-block; /* Blok içinde görüntüle */
+    padding: 10px 20px; /* Kenar boşlukları */
+    background-color: #007bff; /* Arkaplan rengi */
+    border-radius: 5px; /* Köşe yuvarlama */
+    transition: all 0.3s ease; /* Geçiş efekti */
+}
+
+a:hover {
+    background-color: #0056b3; /* Hover rengi */
+}
+
+.content-wrapper {
+    text-align: center;
+    margin-top: 150px; /* İstediğiniz boşluk için margin ekleyebilirsiniz */
+}
+
+.developer {
+    position: fixed;
+    bottom: 0;
+    left: 10%;
+    width: 100%;
+    background-color: #c1c9d218;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #121416;
+    z-index: 1000; /* Gerekirse diğer içeriklerin üzerine çıkmasını sağlar */
+}
+
+.developer .row {
+    position: relative;
+    justify-content: center;
+    animation: shake 5s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
